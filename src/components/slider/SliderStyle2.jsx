@@ -1,17 +1,19 @@
-import React from 'react';
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import React from 'react';
+import { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import img1 from '../../assets/images/box-item/item-h5.1.png'
 import img2 from '../../assets/images/box-item/item-h5.2.png'
 import img3 from '../../assets/images/box-item/item-h5.3.png'
 
 const SliderStyle2 = () => {
-    const subtitle = 'NFT MARKETPLACE'
-    const title = 'Discover, find and sell extraordinary monster NFTs'
-    const description = 'Marketplace for monster character cllections non fungible token NFTs'
+    const subtitle = 'NFT MARKETPLACE';
+    const title = 'Discover, find and sell extraordinary monster NFTs';
+    const description = 'Marketplace for monster character cllections non fungible token NFTs';
+
     return (
         <section className="flat-title-page home5">
             <div className="overlay"></div>
@@ -49,7 +51,6 @@ const SliderStyle2 = () => {
                         <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
-
                     </Swiper>
                     <Swiper
                         modules={[ Autoplay ]}
@@ -69,7 +70,6 @@ const SliderStyle2 = () => {
                         <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
-
                     </Swiper>
                     <Swiper
                         modules={[ Autoplay ]}
@@ -89,7 +89,6 @@ const SliderStyle2 = () => {
                         <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
-
                     </Swiper>
                     <Swiper
                         modules={[ Autoplay ]}
@@ -110,16 +109,11 @@ const SliderStyle2 = () => {
                         <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
                         <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
-
                     </Swiper>
-                   
-                    
                 </div>
             </div>                           
         </section>
     );
 }
-
-
 
 export default SliderStyle2;

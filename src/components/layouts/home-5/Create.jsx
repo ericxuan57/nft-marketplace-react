@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Create = () => {
     const data = [
@@ -24,7 +24,8 @@ const Create = () => {
             description: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!",
             colorbg : "#DF4949"
         },
-    ]
+    ];
+    
     return (
         <section className="tf-box-icon create tf-section bg-home-3">
             <div className="themesflat-container">

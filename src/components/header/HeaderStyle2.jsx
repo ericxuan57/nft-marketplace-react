@@ -1,22 +1,29 @@
 import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
-import menus from "../../pages/menu";
-import DarkMode from './DarkMode';
-import logodark from '../../assets/images/logo/logo_dark.png'
-import avt from '../../assets/images/avatar/avt-2.jpg'
-import coin from '../../assets/images/logo/coin.svg'
 
+import DarkMode from './DarkMode';
+import menus from "../../pages/menu";
+
+import avt from '../../assets/images/avatar/avt-2.jpg';
+import coin from '../../assets/images/logo/coin.svg';
+import logodark from '../../assets/images/logo/logo_dark.png';
 
 const HeaderStyle2 = () => {
     const { pathname } = useLocation();
 
-    const headerRef = useRef (null)
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const headerRef = useRef (null);
+    const menuLeft = useRef(null);
+    const btnToggle = useRef(null);
+
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
             window.removeEventListener('scroll', isSticky);
         };
     });
+
     const isSticky = (e) => {
         const header = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
@@ -24,16 +31,12 @@ const HeaderStyle2 = () => {
         scrollTop >= 400 ? header.classList.add('is-small') : header.classList.remove('is-small');
     };
 
-    const menuLeft = useRef(null)
-    const btnToggle = useRef(null)
 
     const menuToggle = () => {
         menuLeft.current.classList.toggle('active');
         btnToggle.current.classList.toggle('active');
     }
 
-
-    const [activeIndex, setActiveIndex] = useState(null);
     const handleOnClick = index => {
         setActiveIndex(index); 
     };

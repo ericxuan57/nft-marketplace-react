@@ -1,18 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const LiveAuction = props => {
     const data = props.data;
 
     return (
-        
         <section className="tf-section live-auctions">
             <div className="themesflat-container">
                 <div className="row">
@@ -25,7 +23,6 @@ const LiveAuction = props => {
                         <Swiper
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
                             spaceBetween={30}
-
                             breakpoints={{
                                 0: {
                                     slidesPerView: 2,
@@ -44,13 +41,13 @@ const LiveAuction = props => {
                             pagination={{ clickable: true }}
                             scrollbar={{ draggable: true }}
                         >
-                                {
-                                    data.map((item,index) => (
-                                        <SwiperSlide key={index}>
-                                            <TopSellerItem item={item} />
-                                        </SwiperSlide>
-                                    ))
-                                }
+                            {
+                                data.map((item,index) => (
+                                    <SwiperSlide key={index}>
+                                        <TopSellerItem item={item} />
+                                    </SwiperSlide>
+                                ))
+                            }
                         </Swiper>
                     </div>
                 </div>
@@ -82,7 +79,6 @@ const TopSellerItem = props => (
             </div>
         </div>
     </div>
-    
 )
 
 export default LiveAuction;

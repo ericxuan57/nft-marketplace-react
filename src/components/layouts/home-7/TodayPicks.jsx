@@ -1,6 +1,7 @@
 import React , { useState , Fragment } from 'react';
-import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 import CardModal from '../CardModal';
 
 import imgfilter1 from '../../../assets/images/icon/menu.png'
@@ -9,25 +10,25 @@ import imgfilter3 from '../../../assets/images/icon/photo.png'
 import imgfilter4 from '../../../assets/images/icon/itunes.png'
 
 import img1 from '../../../assets/images/box-item/image-box-46.jpg'
-import imga1 from '../../../assets/images/avatar/avt-10.jpg'
-import img2 from '../../../assets/images/box-item/image-box-37.jpg'
-import imga2 from '../../../assets/images/avatar/avt-8.jpg'
-import img3 from '../../../assets/images/box-item/image-box-38.jpg'
-import imga3 from '../../../assets/images/avatar/avt-32.jpg'
-import img4 from '../../../assets/images/box-item/image-box-39.jpg'
-import imga4 from '../../../assets/images/avatar/avt-2.jpg'
-import img5 from '../../../assets/images/box-item/image-box-40.jpg'
-import imga5 from '../../../assets/images/avatar/avt-7.jpg'
-import img6 from '../../../assets/images/box-item/image-box-41.jpg'
-import imga6 from '../../../assets/images/avatar/avt-9.jpg'
-import img7 from '../../../assets/images/box-item/image-box-42.jpg'
-import imga7 from '../../../assets/images/avatar/avt-3.jpg'
-import img8 from '../../../assets/images/box-item/image-box-43.jpg'
-import imga8 from '../../../assets/images/avatar/avt-1.jpg'
-import img9 from '../../../assets/images/box-item/image-box-44.jpg'
-import imga9 from '../../../assets/images/avatar/avt-2.jpg'
 import img10 from '../../../assets/images/box-item/image-box-45.jpg'
+import img2 from '../../../assets/images/box-item/image-box-37.jpg'
+import img3 from '../../../assets/images/box-item/image-box-38.jpg'
+import img4 from '../../../assets/images/box-item/image-box-39.jpg'
+import img5 from '../../../assets/images/box-item/image-box-40.jpg'
+import img6 from '../../../assets/images/box-item/image-box-41.jpg'
+import img7 from '../../../assets/images/box-item/image-box-42.jpg'
+import img8 from '../../../assets/images/box-item/image-box-43.jpg'
+import img9 from '../../../assets/images/box-item/image-box-44.jpg'
+import imga1 from '../../../assets/images/avatar/avt-10.jpg'
 import imga10 from '../../../assets/images/avatar/avt-10.jpg'
+import imga2 from '../../../assets/images/avatar/avt-8.jpg'
+import imga3 from '../../../assets/images/avatar/avt-32.jpg'
+import imga4 from '../../../assets/images/avatar/avt-2.jpg'
+import imga5 from '../../../assets/images/avatar/avt-7.jpg'
+import imga6 from '../../../assets/images/avatar/avt-9.jpg'
+import imga7 from '../../../assets/images/avatar/avt-3.jpg'
+import imga8 from '../../../assets/images/avatar/avt-1.jpg'
+import imga9 from '../../../assets/images/avatar/avt-2.jpg'
 
 const TodayPicks = () => {
     const [data] = useState(
@@ -214,14 +215,13 @@ const TodayPicks = () => {
             },
 
         ]
-    )
-
+    );
     const [visible , setVisible] = useState(10);
+    const [modalShow, setModalShow] = useState(false);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 5);
     }
-
-    const [modalShow, setModalShow] = useState(false);
 
     return (
         <Fragment>
@@ -455,6 +455,5 @@ const TodayPicks = () => {
         </Fragment>
     );
 }
-
 
 export default TodayPicks;

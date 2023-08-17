@@ -1,19 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { Navigation, Scrollbar, A11y   } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
-import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
-import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
-import imgbg from '../../assets/images/backgroup-secsion/img_bg_page_title.jpg'
+import PropTypes from 'prop-types'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Scrollbar, A11y   } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import imgbg from '../../assets/images/backgroup-secsion/img_bg_page_title.jpg';
+import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png';
+import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png';
+import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png';
 
 
 const Slider = props => {
-    const data = props.data
+    const data = props.data;
+
     return (
         <div className="mainslider" >
             <Swiper
@@ -31,7 +33,7 @@ const Slider = props => {
                         
                     ))
                 }
-        </Swiper>
+            </Swiper>
         </div>
     );
 }
@@ -41,7 +43,8 @@ Slider.propTypes = {
     control: PropTypes.bool,
     auto: PropTypes.bool,
     timeOut: PropTypes.number
-}
+};
+
 const SliderItem = props => (
     <div className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
         <img className="bgr-gradient gradient1" src={shape1} alt="Axies" />
@@ -85,7 +88,6 @@ const SliderItem = props => (
                 </div>
             </div>
         </div>        
-    </div>
-    
+    </div>  
 )
 export default Slider;
