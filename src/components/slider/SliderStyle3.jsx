@@ -1,15 +1,14 @@
-import React , { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { Navigation, Pagination, Scrollbar, A11y   } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import React , { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y   } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import img1 from '../../assets/images/box-item/img_cart_item3.png'
-import img2 from '../../assets/images/box-item/img_cart_item4.png'
-import img3 from '../../assets/images/box-item/img_cart_item5.png'
-
+import img1 from '../../assets/images/box-item/img_cart_item3.png';
+import img2 from '../../assets/images/box-item/img_cart_item4.png';
+import img3 from '../../assets/images/box-item/img_cart_item5.png';
 
 const SliderStyle2 = () => {
     const [data] = useState(
@@ -45,9 +44,10 @@ const SliderStyle2 = () => {
                 img: img3
             },
         ]
-    )
+    );
+
     return (
-        <div>
+        <>
             <section className="flat-cart-item home6 style2 mainslider">
                 <div className="overlay"></div>
                 <div className="themesflat-container">
@@ -84,7 +84,7 @@ const SliderStyle2 = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     );
 }
 
@@ -107,8 +107,6 @@ const SliderItem = props => (
             </div>
         </div>
     </div>
-
 )
-
 
 export default SliderStyle2;

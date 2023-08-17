@@ -1,13 +1,15 @@
 import React , { useState , Fragment } from 'react';
 import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardModal from '../CardModal';
 
 const TodayPicks = props => {
     const data = props.data;
 
     const [modalShow, setModalShow] = useState(false);
+
     return (
         <Fragment>
             <section className="tf-explore-2 tf-section live-auctions">
@@ -21,11 +23,9 @@ const TodayPicks = props => {
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.
                             </p>
                             {
-
                                 <Swiper
                                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                                     spaceBetween={30}
-
                                     breakpoints={{
                                         0: {
                                             slidesPerView: 1,

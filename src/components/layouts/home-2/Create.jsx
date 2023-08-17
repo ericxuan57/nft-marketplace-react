@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 import icon1 from '../../../assets/images/icon/Wallet.png'
 import icon2 from '../../../assets/images/icon/Category.png'
 import icon3 from '../../../assets/images/icon/Image2.png'
@@ -31,7 +32,8 @@ const Create = () => {
             icon : icon4,
             colorbg : "icon-color4",
         },
-    ]
+    ];
+
     return (
         <section className="tf-box-icon create tf-section bg-home-3">
             <div className="themesflat-container">
@@ -50,16 +52,15 @@ const Create = () => {
 const CreateItem = props => (
     <div className='col-lg-3 col-md-6 col-12'>
         <div className="sc-box-icon">
-        <div className="image center">
-            <div className={`icon-create ${props.item.colorbg}`}>
+            <div className="image center">
+                <div className={`icon-create ${props.item.colorbg}`}>
                     <img src={props.item.icon} alt="" />
                 </div>                                                                           
             </div>
-        <h3 className="heading"><Link to="/wallet-connect">{props.item.title}</Link></h3>
-        <p className="content">{props.item.description}</p>
+            <h3 className="heading"><Link to="/wallet-connect">{props.item.title}</Link></h3>
+            <p className="content">{props.item.description}</p>
+        </div>
     </div>
-    </div>
-    
 )
 
 export default Create;

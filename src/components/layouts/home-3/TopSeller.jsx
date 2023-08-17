@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const TopSeller = props => {
     const data = props.data;
+    
     return (
         <section className="tf-section top-seller bg-home-3">
             <div className="themesflat-container">

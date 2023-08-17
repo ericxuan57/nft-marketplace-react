@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 import { Navigation, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const PopularCollection = props => {
     const data = props.data;
+
     return (
         <section className="tf-section popular-collection">
             <div className="themesflat-container">
@@ -19,39 +20,40 @@ const PopularCollection = props => {
                     </div>
                     <div className="col-md-12">
                         <div className="collection">
-                        <Swiper
-                            modules={[Navigation, Scrollbar, A11y]}
-                            spaceBetween={30}
-                            breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
-                                  },
-    
-                                767: {
-                                  slidesPerView: 2,
-                                },
+                            <Swiper
+                                modules={[Navigation, Scrollbar, A11y]}
+                                spaceBetween={30}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+        
+                                    767: {
+                                    slidesPerView: 2,
+                                    },
 
-                                991: {
-                                  slidesPerView: 3,
-                                },
-                              }}
-                            scrollbar={{ draggable: true }}
-                        >
-                            {
-                                data.map((item,index) => (
-                                    <SwiperSlide key={index}>
-                                        <PopularCollectionItem item={item} />
-                                    </SwiperSlide>
-                                ))
-                            }
-                        </Swiper>
+                                    991: {
+                                    slidesPerView: 3,
+                                    },
+                                }}
+                                scrollbar={{ draggable: true }}
+                            >
+                                {
+                                    data.map((item,index) => (
+                                        <SwiperSlide key={index}>
+                                            <PopularCollectionItem item={item} />
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
                         </div>    
                     </div>
                 </div>
             </div>
         </section>
     );
-}
+};
+
 PopularCollection.propTypes = {
     data: PropTypes.array.isRequired,
 }

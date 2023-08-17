@@ -1,22 +1,25 @@
+import PropTypes from 'prop-types';
 import React , { useState , Fragment } from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+import CardModal from '../CardModal';
+
 import img1 from '../../../assets/images/icon/menu.png'
 import img2 from '../../../assets/images/icon/rainbow.png'
 import img3 from '../../../assets/images/icon/photo.png'
 import img4 from '../../../assets/images/icon/itunes.png'
-import CardModal from '../CardModal';
 
 const TodayPicks = props => {
     const data = props.data;
 
     const [visible , setVisible] = useState(8);
+    const [modalShow, setModalShow] = useState(false);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
     }
 
-    const [modalShow, setModalShow] = useState(false);
     return (
         <Fragment>
             <section className="tf-section today-pick">
@@ -223,8 +226,6 @@ const TodayPicks = props => {
         </Fragment>
     );
 }
-
-
 
 TodayPicks.propTypes = {
     data: PropTypes.array.isRequired,

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import icon1 from '../../assets/images/icon/Wallet.png'
-import icon2 from '../../assets/images/icon/Category.png'
-import icon3 from '../../assets/images/icon/Image2.png'
-import icon4 from '../../assets/images/icon/Bookmark.png'
+import { Link } from 'react-router-dom';
+
+import icon1 from '../../assets/images/icon/Wallet.png';
+import icon2 from '../../assets/images/icon/Category.png';
+import icon3 from '../../assets/images/icon/Image2.png';
+import icon4 from '../../assets/images/icon/Bookmark.png';
 
 const Create = () => {
     const data = [
@@ -31,7 +32,8 @@ const Create = () => {
             icon : icon4,
             colorbg : "icon-color4"
         },
-    ]
+    ];
+    
     return (
         <section className="tf-box-icon create style1 tf-section">
             <div className="themesflat-container">

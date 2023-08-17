@@ -1,18 +1,20 @@
+import PropTypes from 'prop-types';
 import React , { useState , Fragment } from 'react';
-import PropTypes from 'prop-types'
 import { Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 import CardModal from '../CardModal';
 
 const TodayPicks = props => {
     const data = props.data;
 
     const [visible , setVisible] = useState(8);
+    const [modalShow, setModalShow] = useState(false);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
-    }
+    };
 
-    const [modalShow, setModalShow] = useState(false);
     return (
         <Fragment>
             <section className="tf-section today-pick">
@@ -108,8 +110,6 @@ const TodayPicks = props => {
         </Fragment>
     );
 }
-
-
 
 TodayPicks.propTypes = {
     data: PropTypes.array.isRequired,

@@ -1,7 +1,9 @@
 import React, { useState ,useEffect } from 'react';
-import { Link } from 'react-router-dom'
-import logodark from '../../assets/images/logo/logo_dark.png'
-import logofooter from '../../assets/images/logo/logo2.png'
+import { Link } from 'react-router-dom';
+
+import logoDark from '../../assets/images/logo/logo_dark.png';
+import logoFooter from '../../assets/images/logo/logo2.png';
+
 const Footer = () => {
     const accountList = [
         {
@@ -20,7 +22,8 @@ const Footer = () => {
             title: "Create Item",
             link: "/create-item"
         },
-    ]
+    ];
+
     const resourcesList = [
         {
             title: "Help & Support",
@@ -38,7 +41,8 @@ const Footer = () => {
             title: "Activity",
             link: "/activity-01"
         },
-    ]
+    ];
+
     const companyList = [
         {
             title: "Explore",
@@ -56,7 +60,8 @@ const Footer = () => {
             title: "FAQ",
             link: "/faq"
         },
-    ]
+    ];
+
     const socialList = [
         {
             icon: "fab fa-twitter",
@@ -82,9 +87,7 @@ const Footer = () => {
             icon: "icon-fl-vt",
             link: "#"
         },
-        
-
-    ]
+    ];
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -119,8 +122,8 @@ const Footer = () => {
                             <div className="widget widget-logo">
                                 <div className="logo-footer" id="logo-footer">
                                     <Link to="/">
-                                        <img className='logo-dark' id="logo_footer" src={logodark} alt="nft-gaming" />
-                                        <img className='logo-light' id="logo_footer" src={logofooter} alt="nft-gaming" />
+                                        <img className='logo-dark' id="logo_footer" src={logoDark} alt="nft-gaming" />
+                                        <img className='logo-light' id="logo_footer" src={logoFooter} alt="nft-gaming" />
                                         
                                     </Link>
                                 </div>
@@ -186,6 +189,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+
             {
                 isVisible && 
                 <Link onClick={scrollToTop}  to='#' id="scroll-top"></Link>
@@ -224,9 +228,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
         </div>
-
     );
 }
 

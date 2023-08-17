@@ -1,17 +1,18 @@
 import React , { useState } from 'react';
-import { Link } from 'react-router-dom'
-import imgTop1 from '../../../assets/images/box-item/collection-item-17.jpg'
+import { Link } from 'react-router-dom';
+
 import img1Bottom1 from '../../../assets/images/box-item/collection-item-18.jpg'
 import img1Bottom2 from '../../../assets/images/box-item/collection-item-19.jpg'
 import img1Bottom3 from '../../../assets/images/box-item/collection-item-20.jpg'
-import imgAuthor1 from '../../../assets/images/avatar/avt-7.jpg'
-import imgTop2 from '../../../assets/images/box-item/collection-item-21.jpg'
 import img2Bottom1 from '../../../assets/images/box-item/collection-item-22.jpg'
 import img2Bottom2 from '../../../assets/images/box-item/collection-item-23.jpg'
 import img2Bottom3 from '../../../assets/images/box-item/collection-item-24.jpg'
+import imgAuthor1 from '../../../assets/images/avatar/avt-7.jpg'
 import imgAuthor2 from '../../../assets/images/avatar/avt-10.jpg'
-import imgTop3 from '../../../assets/images/box-item/collection-item-25.jpg'
 import imgAuthor3 from '../../../assets/images/avatar/avt-3.jpg'
+import imgTop1 from '../../../assets/images/box-item/collection-item-17.jpg'
+import imgTop2 from '../../../assets/images/box-item/collection-item-21.jpg'
+import imgTop3 from '../../../assets/images/box-item/collection-item-25.jpg'
 
 const PopularCollection = () => {
     const [data] = useState(
@@ -77,12 +78,13 @@ const PopularCollection = () => {
                 wishlist: '100'
             },
         ]
-    )
-
+    );
     const [visible , setVisible] = useState(3);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
-    }
+    };
+
     return (
         <section className="tf-section live-auctions style4 home4 live-auctions-style7">
             <div className="themesflat-container">
@@ -136,9 +138,8 @@ const PopularCollection = () => {
                     }
                 </div>
             </div>
-    </section>
+        </section>
     );
 }
-
 
 export default PopularCollection;

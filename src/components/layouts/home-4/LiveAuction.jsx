@@ -1,10 +1,11 @@
-import React , { useState , Fragment } from 'react';
-import PropTypes from 'prop-types'
-import { Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
+import PropTypes from 'prop-types';
+import React , { useState , Fragment } from 'react';
+import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardModal from '../CardModal';
 
 import 'swiper/scss';
