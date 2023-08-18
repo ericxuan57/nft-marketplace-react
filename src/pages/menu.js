@@ -86,9 +86,10 @@ const menus = [
                 sub: 'Item Details 02',
                 links: '/item-details-02'
             }
-            
+
         ],
-    },{
+    },
+    {
         id: 3,
         name: 'Activity',
         links: '#',
@@ -201,7 +202,6 @@ const menus = [
             }
         ],
     },
-    
 ]
 
 export default menus;

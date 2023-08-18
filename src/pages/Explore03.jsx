@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import Header from '../components/header/Header';
+import { Link } from 'react-router-dom';
+
 import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 import TodayPicks from '../components/layouts/explore-03/TodayPicks';
 import todayPickData from '../assets/fake-data/data-today-pick';
 
 const Explore03 = () => {
     return (
-        <div>
+        <>
             <Header />
             <section className="flat-title-page inner">
                 <div className="overlay"></div>
@@ -30,7 +31,7 @@ const Explore03 = () => {
             </section>
             <TodayPicks data={todayPickData} />
             <Footer />
-        </div>
+        </>
     );
 }
 

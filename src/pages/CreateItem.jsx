@@ -1,12 +1,14 @@
+import Countdown from "react-countdown";
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import Countdown from "react-countdown";
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
+
+import avt from '../assets/images/avatar/avt-9.jpg';
+import img1 from '../assets/images/box-item/image-box-6.jpg';
+
 import 'react-tabs/style/react-tabs.css';
-import img1 from '../assets/images/box-item/image-box-6.jpg'
-import avt from '../assets/images/avatar/avt-9.jpg'
 
 const CreateItem = () => {
     return (

@@ -1,15 +1,18 @@
 import React , {useState} from 'react';
 import { Link } from 'react-router-dom';
+
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import img1 from '../assets/images/box-item/imgactivity2.jpg'
-import img2 from '../assets/images/box-item/image-box-21.jpg'
-import img3 from '../assets/images/box-item/image-box-6.jpg'
-import img4 from '../assets/images/box-item/card-item-7.jpg'
-import img5 from '../assets/images/box-item/card-item-9.jpg'
-import img6 from '../assets/images/box-item/image-box-11.jpg'
-import img7 from '../assets/images/box-item/card-item-4.jpg'
-import img8 from '../assets/images/box-item/card-item-3.3.jpg'
+
+import img1 from '../assets/images/box-item/imgactivity2.jpg';
+import img2 from '../assets/images/box-item/image-box-21.jpg';
+import img3 from '../assets/images/box-item/image-box-6.jpg';
+import img4 from '../assets/images/box-item/card-item-7.jpg';
+import img5 from '../assets/images/box-item/card-item-9.jpg';
+import img6 from '../assets/images/box-item/image-box-11.jpg';
+import img7 from '../assets/images/box-item/card-item-4.jpg';
+import img8 from '../assets/images/box-item/card-item-3.3.jpg';
+
 const Activity02 = () => {
     const [dataBox] = useState(
         [
@@ -177,11 +180,12 @@ const Activity02 = () => {
             },
         ]
     )
-
     const [visible , setVisible] = useState(8);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
-    }
+    };
+
     return (
         <div>
             <Header />
@@ -274,7 +278,6 @@ const Activity02 = () => {
                 </div>
             </section>
             <Footer />
-
         </div>
     );
 }

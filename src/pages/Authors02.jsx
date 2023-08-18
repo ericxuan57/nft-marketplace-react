@@ -1,10 +1,12 @@
 import React , { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+
 import CardModal from '../components/layouts/CardModal';
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+
+import 'react-tabs/style/react-tabs.css';
 
 import avt from '../assets/images/avatar/avt-author-tab.jpg'
 import img1 from '../assets/images/box-item/card-item-3.jpg'
@@ -32,7 +34,6 @@ import img8 from '../assets/images/box-item/image-box-11.jpg'
 import imga8 from '../assets/images/avatar/avt-3.jpg'
 import imgCollection8 from '../assets/images/avatar/avt-18.jpg'
 
-
 const Authors02 = () => {
     const [menuTab] = useState(
         [
@@ -57,7 +58,7 @@ const Authors02 = () => {
                 name: 'SPORTS'
             },
         ]
-    )
+    );
     const [panelTab] = useState(
         [
             {
@@ -499,14 +500,13 @@ const Authors02 = () => {
                 ]
             },
         ]
-    )
-
+    );
     const [visible , setVisible] = useState(8);
+    const [modalShow, setModalShow] = useState(false);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
     }
-
-    const [modalShow, setModalShow] = useState(false);
 
     return (
         <div className='authors-2'>

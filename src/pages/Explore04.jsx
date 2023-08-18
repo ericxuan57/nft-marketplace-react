@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import { Link } from 'react-router-dom';
+
 import Explore from '../components/layouts/explore-04/Explore';
-import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+import widgetSidebarData from '../assets/fake-data/data-widget-sidebar';
     
 const Explore04 = () => {
     return (

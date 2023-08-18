@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import Header from '../components/header/Header';
+import { Link } from 'react-router-dom';
+
 import Footer from '../components/footer/Footer';
-import TodayPicks from '../components/layouts/explore-02/TodayPicks'
+import Header from '../components/header/Header';
+import TodayPicks from '../components/layouts/explore-02/TodayPicks';
 import todayPickData from '../assets/fake-data/data-today-pick';
 
 const Explore02 = () => {

@@ -1,9 +1,10 @@
 import React from 'react';
-import Header from '../components/header/Header';
+import { Link } from 'react-router-dom';
+
 import Footer from '../components/footer/Footer';
-import { Link } from 'react-router-dom'
-import liveAuctionData from '../assets/fake-data/data-live-auction';
+import Header from '../components/header/Header';
 import LiveAuction from '../components/layouts/auctions/LiveAuction';
+import liveAuctionData from '../assets/fake-data/data-live-auction';
 
 const LiveAuctions = () => {
     return (

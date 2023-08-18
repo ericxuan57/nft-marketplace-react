@@ -1,7 +1,9 @@
 import React , {useState} from 'react';
 import { Link } from 'react-router-dom';
+
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+
 import img1 from '../assets/images/icon/icon-1.png'
 import img2 from '../assets/images/icon/icon-2.png'
 import img3 from '../assets/images/icon/icon-3.png'
@@ -46,9 +48,10 @@ const HelpCenter = () => {
                 description: 'Varius culpa, aspernatur accusantium? Corporis rhoncus, voluptatibus incididunt, velit'
             },
         ]
-    )
+    );
+
     return (
-        <div>
+        <>
             <Header />
             <section className="flat-title-page inner">
                 <div className="overlay"></div>
@@ -122,7 +125,7 @@ const HelpCenter = () => {
                 </div>
             </section>
             <Footer />
-        </div>
+        </>
     );
 }
 

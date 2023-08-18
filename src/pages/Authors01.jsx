@@ -1,21 +1,24 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/header/Header';
+
 import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 import TopSeller from '../components/layouts/authors/TopSeller';
-import topSellerData from '../assets/fake-data/data-top-seller'
 import popularCollectionData from '../assets/fake-data/data-popular-collection';
+import topSellerData from '../assets/fake-data/data-top-seller'
 
 const Authors01 = () => {
     const [data] = useState(popularCollectionData);
-
     const [visible , setVisible] = useState(6);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
-    }
+    };
+
     return (
         <div className='authors'>
             <Header />
+
             <section className="flat-title-page inner">
                 <div className="overlay"></div>
                 <div className="themesflat-container">
@@ -35,6 +38,7 @@ const Authors01 = () => {
                     </div>
                 </div>                    
             </section>
+
             <TopSeller data={topSellerData} />
 
             <section className="tf-section our-creater dark-style2">
@@ -94,6 +98,7 @@ const Authors01 = () => {
                     </div>
                 </div>
             </section>
+            
             <Footer />
         </div>
     );

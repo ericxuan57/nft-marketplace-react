@@ -1,8 +1,9 @@
 import React , { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Accordion } from 'react-bootstrap-accordion';
+import { Link } from 'react-router-dom';
+
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import { Accordion } from 'react-bootstrap-accordion'
 
 const FAQ = () => {
     const [data] = useState(
@@ -33,9 +34,10 @@ const FAQ = () => {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
             },
         ]
-    )
+    );
+
     return (
-        <div>
+        <>
             <Header />
             <section className="flat-title-page inner">
                 <div className="overlay"></div>
@@ -82,7 +84,7 @@ const FAQ = () => {
                 </div>
             </section>
             <Footer />
-        </div>
+        </>
     );
 }
 
