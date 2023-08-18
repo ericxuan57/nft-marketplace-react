@@ -1,9 +1,10 @@
-import React , { useState , Fragment } from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
+import PropTypes from 'prop-types';
+import React , { useState , Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardModal from '../CardModal';
 
 import 'swiper/scss';
@@ -49,55 +50,55 @@ const LiveAuction = props => {
                                 pagination={{ clickable: true }}
                                 scrollbar={{ draggable: true }}
                             >
-                                    {
-                                        data.slice(0,7).map((item,index) => (
-                                            <SwiperSlide key={index}>
-                                                <div className="swiper-container show-shadow carousel auctions">
-                                                    <div className="swiper-wrapper">
-                                                        <div className="swiper-slide">
-                                                            <div className="slider-item">										
-                                                                <div className="sc-card-product">
-                                                                    <div className="card-media">
-                                                                        <Link to="/item-details-01"><img src={item.img} alt="axies" /></Link>
-                                                                        <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
-                                                                        <div className="featured-countdown">
-                                                                            <span className="slogan"></span>
-                                                                            <Countdown date={Date.now() + 500000000}>
-                                                                                <span>You are good to go!</span>
-                                                                            </Countdown>
+                                {
+                                    data.slice(0,7).map((item,index) => (
+                                        <SwiperSlide key={index}>
+                                            <div className="swiper-container show-shadow carousel auctions">
+                                                <div className="swiper-wrapper">
+                                                    <div className="swiper-slide">
+                                                        <div className="slider-item">										
+                                                            <div className="sc-card-product">
+                                                                <div className="card-media">
+                                                                    <Link to="/item-details-01"><img src={item.img} alt="axies" /></Link>
+                                                                    <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
+                                                                    <div className="featured-countdown">
+                                                                        <span className="slogan"></span>
+                                                                        <Countdown date={Date.now() + 500000000}>
+                                                                            <span>You are good to go!</span>
+                                                                        </Countdown>
+                                                                    </div>
+                                                                    <div className="button-place-bid">
+                                                                        <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="card-title">
+                                                                    <h5><Link to="/item-details-01">"{item.title}"</Link></h5>
+                                                                    <div className="tags">{item.tags}</div>
+                                                                </div>
+                                                                <div className="meta-info">
+                                                                    <div className="author">
+                                                                        <div className="avatar">
+                                                                            <img src={item.imgAuthor} alt="axies" />
                                                                         </div>
-                                                                        <div className="button-place-bid">
-                                                                            <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></button>
+                                                                        <div className="info">
+                                                                            <span>Creator</span>
+                                                                            <h6> <Link to="/authors-02">{item.nameAuthor}
+                                                                            </Link> </h6>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="card-title">
-                                                                        <h5><Link to="/item-details-01">"{item.title}"</Link></h5>
-                                                                        <div className="tags">{item.tags}</div>
+                                                                    <div className="price">
+                                                                        <span>Current Bid</span>
+                                                                        <h5> {item.price}</h5>
                                                                     </div>
-                                                                    <div className="meta-info">
-                                                                        <div className="author">
-                                                                            <div className="avatar">
-                                                                                <img src={item.imgAuthor} alt="axies" />
-                                                                            </div>
-                                                                            <div className="info">
-                                                                                <span>Creator</span>
-                                                                                <h6> <Link to="/authors-02">{item.nameAuthor}
-                                                                                </Link> </h6>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div className="price">
-                                                                            <span>Current Bid</span>
-                                                                            <h5> {item.price}</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>    	
-                                                            </div>
+                                                                </div>
+                                                            </div>    	
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </SwiperSlide>
-                                        ))
-                                    }
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
                             </Swiper>
                         </div>
                     </div>
@@ -106,7 +107,7 @@ const LiveAuction = props => {
             <CardModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
-                />
+            />
         </Fragment>
     );
 }

@@ -1,8 +1,9 @@
-import React , { useState , Fragment } from 'react';
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
+import React , { useState , Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardModal from '../CardModal';
 
 import 'swiper/scss';
@@ -10,14 +11,14 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
 import img1 from '../../../assets/images/box-item/image-box-32.jpg'
-import imga1 from '../../../assets/images/avatar/avt-1.jpg'
 import img2 from '../../../assets/images/box-item/image-box-33.jpg'
-import imga2 from '../../../assets/images/avatar/avt-3.jpg'
 import img3 from '../../../assets/images/box-item/image-box-34.jpg'
-import imga3 from '../../../assets/images/avatar/avt-27.jpg'
 import img4 from '../../../assets/images/box-item/image-box-35.jpg'
-import imga4 from '../../../assets/images/avatar/avt-10.jpg'
 import img5 from '../../../assets/images/box-item/image-box-36.jpg'
+import imga1 from '../../../assets/images/avatar/avt-1.jpg'
+import imga2 from '../../../assets/images/avatar/avt-3.jpg'
+import imga3 from '../../../assets/images/avatar/avt-27.jpg'
+import imga4 from '../../../assets/images/avatar/avt-10.jpg'
 import imga5 from '../../../assets/images/avatar/avt-5.jpg'
 
 const LiveAuction = () => {
@@ -97,8 +98,8 @@ const LiveAuction = () => {
             },
         ]
     )
-
     const [modalShow, setModalShow] = useState(false);
+
     return (
         <Fragment>
             <section className="tf-section live-auctions">
@@ -198,6 +199,5 @@ const LiveAuction = () => {
         </Fragment>
     );
 }
-
 
 export default LiveAuction;

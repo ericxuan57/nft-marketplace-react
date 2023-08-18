@@ -1,16 +1,18 @@
 import React , { useState , Fragment } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 import CardModal from '../CardModal';
 
 const ExploreItem = props => {
-    const data = props.data
+    const data = props.data;
 
     const [visible , setVisible] = useState(6);
+    const [modalShow, setModalShow] = useState(false); 
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 6);
     }
 
-    const [modalShow, setModalShow] = useState(false);
     return (
         <Fragment>
             <div className='explore'>

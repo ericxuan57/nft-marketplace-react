@@ -1,20 +1,18 @@
-import React , { useState } from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-
 import Countdown from "react-countdown";
-
+import PropTypes from 'prop-types';
+import React , { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LiveAuction = props => {
     const data = props.data;
 
     const [visible , setVisible] = useState(8);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
     }
 
-    return (
-        
+    return (  
         <section className="tf-section live-auctions">
             <div className="themesflat-container">
                 <div className="row">
@@ -41,7 +39,7 @@ const LiveAuction = props => {
 
 LiveAuction.propTypes = {
     data: PropTypes.array.isRequired,
-}
+};
 
 const LiveAuctionItem = props => (
     <div className="fl-item col-xl-3 col-lg-6 col-md-6">
@@ -81,8 +79,6 @@ const LiveAuctionItem = props => (
             </div>
         </div>
     </div>
-    
-    
-)
+);
 
 export default LiveAuction;

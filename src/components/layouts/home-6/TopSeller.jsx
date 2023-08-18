@@ -1,13 +1,14 @@
 import React , { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-
+import { Link } from 'react-router-dom';
 import { Navigation, Scrollbar, A11y   } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+import 'react-tabs/style/react-tabs.css';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+
 import img1 from '../../../assets/images/avatar/avt-1.jpg'
 import img2 from '../../../assets/images/avatar/avt-2.jpg'
 import img3 from '../../../assets/images/avatar/avt-4.jpg'
@@ -31,7 +32,7 @@ const TopSeller = () => {
                 title: '1 Month',
             },
         ]
-    )
+    );
     const [dataTopSellerPanel] = useState(
         [
             {
@@ -275,7 +276,8 @@ const TopSeller = () => {
                 ]
             },
         ]
-    )
+    );
+
     return (
         <div>
             <section className="tf-section top-seller home5 s2 ">
@@ -342,8 +344,8 @@ const TopSeller = () => {
         </div>
     );
 }
-const SliderItem = props => (
-    
+
+const SliderItem = props => ( 
     <div className="sc-author-box style-2">
         <div className="author-avatar">
                 <img src={props.item.img} alt="Axies" className="avatar" />

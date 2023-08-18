@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Scrollbar, A11y } from 'swiper';
-
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const TopSeller = props => {
     const data = props.data;
+
     return (
         <section className="tf-section top-seller">
             <div className="themesflat-container">
@@ -20,37 +20,37 @@ const TopSeller = props => {
                         </div>
                     </div>
                     <div className="col-md-12">
-                    <Swiper
-                        modules={[Navigation , Scrollbar, A11y]}
-                        spaceBetween={30}
-                        navigation
-                        breakpoints={{
-                            0: {
-                                slidesPerView: 2,
-                              },
-                            767: {
-                              slidesPerView: 5,
-                            },
-                            991: {
-                              slidesPerView: 7,
-                            },
-                            1200: {
-                                slidesPerView: 8,
-                              },
-                            1350: {
-                            slidesPerView: 9,
-                            },
-                          }}
-                        scrollbar={{ draggable: true }}                
-                    >
-                        {
-                            data.map((item,index) => (
-                                <SwiperSlide key={index}>
-                                    <TopSellerItem item={item} />
-                                </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
+                        <Swiper
+                            modules={[Navigation , Scrollbar, A11y]}
+                            spaceBetween={30}
+                            navigation
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 2,
+                                },
+                                767: {
+                                slidesPerView: 5,
+                                },
+                                991: {
+                                slidesPerView: 7,
+                                },
+                                1200: {
+                                    slidesPerView: 8,
+                                },
+                                1350: {
+                                slidesPerView: 9,
+                                },
+                            }}
+                            scrollbar={{ draggable: true }}                
+                        >
+                            {
+                                data.map((item,index) => (
+                                    <SwiperSlide key={index}>
+                                        <TopSellerItem item={item} />
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>
                     </div>
                 </div>
             </div>

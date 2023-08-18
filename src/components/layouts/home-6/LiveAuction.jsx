@@ -1,8 +1,9 @@
-import React , { useState , Fragment } from 'react';
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
+import React , { useState , Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardModal from '../CardModal';
 
 import 'swiper/scss';
@@ -75,7 +76,7 @@ const LiveAuction = () => {
             },
 
         ]
-    )
+    );
 
     const [modalShow, setModalShow] = useState(false);
 
@@ -172,6 +173,5 @@ const LiveAuction = () => {
         </Fragment>
     );
 }
-
 
 export default LiveAuction;

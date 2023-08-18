@@ -1,25 +1,29 @@
 import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
-import menus from "../../pages/menu";
+
 import DarkMode from './DarkMode';
-import logoheader from '../../assets/images/logo/logo.png'
-import logoheader2x from '../../assets/images/logo/logo@2x.png'
+import menus from "../../pages/menu";
+
+import avt from '../../assets/images/avatar/avt-2.jpg'
+import imgsun from '../../assets/images/icon/sun.png'
 import logodark from '../../assets/images/logo/logo_dark.png'
 import logodark2x from '../../assets/images/logo/logo_dark@2x.png'
-import imgsun from '../../assets/images/icon/sun.png'
-import avt from '../../assets/images/avatar/avt-2.jpg'
+import logoheader from '../../assets/images/logo/logo.png'
+import logoheader2x from '../../assets/images/logo/logo@2x.png'
 
 
 const Header = () => {
     const { pathname } = useLocation();
 
-    const headerRef = useRef (null)
+    const headerRef = useRef (null);
+
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
             window.removeEventListener('scroll', isSticky);
         };
     });
+
     const isSticky = (e) => {
         const header = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
@@ -81,7 +85,6 @@ const Header = () => {
                                                             }
                                                         </ul>
                                                     }
-                                                    
                                                 </li>
                                             ))
                                         }

@@ -1,10 +1,12 @@
-import React from 'react';
-import { Accordion } from 'react-bootstrap-accordion'
 import ExploreItem from './ExploreItem';
+import React from 'react';
+import { Accordion } from 'react-bootstrap-accordion';
+
 import todayPickData from '../../../assets/fake-data/data-today-pick';
 
 const Explore = props => {
     const data = props.data;
+    
     return (
         <section className="tf-explore tf-section">
             <div className="themesflat-container">
