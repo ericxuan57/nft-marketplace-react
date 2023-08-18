@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import { Link } from 'react-router-dom'
 import Countdown from "react-countdown";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import liveAuctionData from '../assets/fake-data/data-live-auction';
+
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 import LiveAuction from '../components/layouts/LiveAuction';
 import img1 from '../assets/images/avatar/avt-3.jpg'
 import img2 from '../assets/images/avatar/avt-11.jpg'
@@ -15,6 +14,9 @@ import img5 from '../assets/images/avatar/avt-7.jpg'
 import img6 from '../assets/images/avatar/avt-8.jpg'
 import img7 from '../assets/images/avatar/avt-2.jpg'
 import imgdetail1 from '../assets/images/box-item/images-item-details2.jpg'
+import liveAuctionData from '../assets/fake-data/data-live-auction';
+
+import 'react-tabs/style/react-tabs.css';
 
 const ItemDetails02 = () => {
     const [dataHistory] = useState(

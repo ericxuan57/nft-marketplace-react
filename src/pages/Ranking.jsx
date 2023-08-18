@@ -1,7 +1,8 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/header/Header';
+
 import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 import img1 from '../assets/images/box-item/img3rank.jpg'
 import img2 from '../assets/images/box-item/img4rank.jpg'
 import img3 from '../assets/images/box-item/img5rank.jpg'
@@ -158,11 +159,13 @@ const Ranking = () => {
                 assets: '23k'
             },
         ]
-    )
+    );
     const [visible , setVisible] = useState(6);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
-    }
+    };
+
     return (
         <div>
             <Header />

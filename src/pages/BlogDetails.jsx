@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import { Link } from 'react-router-dom';
+
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
@@ -41,7 +42,7 @@ const BlogDetails = () => {
             },
 
         ]
-    )
+    );
     const [dataTags] = useState(
         [
             {
@@ -72,7 +73,8 @@ const BlogDetails = () => {
                 name: 'Crypto'
             },
         ]
-    )
+    );
+
     return (
         <div>
             <Header />
@@ -230,4 +232,5 @@ const BlogDetails = () => {
         </div>
     );
 }
+
 export default BlogDetails;
